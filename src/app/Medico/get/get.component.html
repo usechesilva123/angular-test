@@ -1,0 +1,48 @@
+<div>
+    <div class="card">
+        <div class="card-header">
+            <h3>Medicos</h3>
+        </div>
+<div class="card-body">
+<table class="table table-hover">
+    <thead>
+        <tr>
+        <th>ID</th>
+        <th>Tipo de documento</th>
+        <th>Numero de documento</th>
+        <th>Nombre</th>
+        <th>Registro medico</th>
+        <th>Especialidad</th>
+        <th>Agenda</th>
+        <th>Dirección</th>
+        <th>Ciudad</th>
+        <th>Telefono</th>
+        <th>Correo</th>
+        <th>Funcion captura firma</th>
+        <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let medico of medicos" class="text-center">
+            <td>{{medico.id}}</td>
+            <td>{{medico.tipoDocumento}}</td>
+            <td>{{medico.numeroDocumento}}</td>
+            <td>{{medico.primerNombre}} {{medico.primerApellido}} {{medico.segundoApellido}}</td>
+            <td>{{medico.registroMedico}}</td>
+            <td>{{medico.especialidad}}</td>
+            <td>{{medico.agenda}}</td>
+            <td>{{medico.direccion}}</td>
+            <td>{{medico.ciudad}}</td>
+            <td>{{medico.telefono}}</td>
+            <td>{{medico.correo}}</td>
+            <td>{{medico.capturaFirma}}</td>
+            <td>
+                <button (click)="Editar(medico)" class="btn btn-warning" style="margin-right: 10px;">Editar</button>
+                <button (click)="Eliminar(medico)" class="btn btn-danger">Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+    </div>
+</div>

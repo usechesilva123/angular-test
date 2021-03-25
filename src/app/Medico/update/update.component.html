@@ -1,0 +1,82 @@
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>Editar medico</h3>
+        </div>
+<div class="card-body">
+    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+        <div class="form-group">
+            <label>Tipo de documento:</label>
+            <p>
+                <select name="tipoDocumento" [(ngModel)]="medico.tipoDocumento" class="form-control">
+                    <option [value]="item" *ngFor="let item of documentos">{{item}}</option>
+                </select>
+            </p>
+        </div>
+        <div class="form-group">
+            <label for="">Numero de documento:</label>
+            <input name="numeroDocumento" [(ngModel)]="medico.numeroDocumento" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Primer nombre:</label>
+            <input name="primerNombre" [(ngModel)]="medico.primerNombre" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Segundo nombre:</label>
+            <input name="segundoNombre" [(ngModel)]="medico.segundoNombre" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Primer apellido:</label>
+            <input name="primerApellido" [(ngModel)]="medico.primerApellido" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Segundo apellido:</label>
+            <input name="segundoApellido" [(ngModel)]="medico.segundoApellido" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Registro medico:</label>
+            <input name="registroMedico" [(ngModel)]="medico.registroMedico" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Especialidad:</label>
+            <input name="especialidad" [(ngModel)]="medico.especialidad" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Agenda:</label>
+            <p>
+                <select name="agenda" [(ngModel)]="medico.agenda" class="form-control">
+                    <option [value]="item" *ngFor="let item of agendas">{{item}}</option>
+                </select>
+            </p>
+        </div>
+        <div class="form-group">
+            <label for="">Direccion:</label>
+            <input name="direccion" [(ngModel)]="medico.direccion" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Ciudad:</label>
+            <input name="ciudad" [(ngModel)]="medico.ciudad" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Telefono:</label>
+            <input name="telefono" [(ngModel)]="medico.telefono" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Correo:</label>
+            <input name="correo" [(ngModel)]="medico.correo" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Captura firma:</label>
+            <p>
+                <select name="capturaFirma" [(ngModel)]="medico.capturaFirma" class="form-control">
+                    <option [value]="item" *ngFor="let item of funcionCaptura">{{item}}</option>
+                </select>
+            </p>
+        </div>
+        <button type="submit" class="btn btn-danger">Guardar</button>
+    </form>
+</div>
+    </div>
+</div>
+
+
